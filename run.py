@@ -1,17 +1,20 @@
 
 ## zero_after_one, count how many zeros in the list are after 1
 
-def zero_after_one(list):
+def zero_after_one(mylist):
   counter = 0
-  start = list.i(1)
-  list = []
-
-  for zero in list:
-    if i == 0:
-        i += 1
-    else:
-        break
-  return counter
+  start = mylist.index(1, 0)
+  mylist = mylist[start+1:]
+  print(mylist)
+  if 1 in mylist:
+    for zero in mylist:
+      if zero == 0:
+          counter += 1
+      else:
+          break
+    return counter
+  else:
+    return 0
 
 
 assert zero_after_one([]) == 0
